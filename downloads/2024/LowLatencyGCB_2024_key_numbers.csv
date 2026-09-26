@@ -1,0 +1,6 @@
+edition,period,quantity,value,uncertainty_1sigma,unit,note
+2024,January–December 2024,Atmospheric CO₂ growth rate,3.73,0.08,ppm yr⁻¹,NOAA marine boundary layer; record high since 1959
+2024,January–December 2024,Fossil CO₂ emissions,10.19,0.01,GtC yr⁻¹,+0.85% compared with 2023
+2024,January–December 2024,Net land flux,-0.65,0.85,GtC yr⁻¹,"DGVMs: a net source, the weakest since 1987. OCO-2 inversions: a sink of 0.29 ± 0.80"
+2024,January–December 2024,Ocean sink,2.48,0.29,GtC yr⁻¹,Emulators 2.66 ± 0.55; inversions 2.30 ± 0.19
+2024,January–December 2024,Budget imbalance,0.26,1.03,GtC yr⁻¹,"Bottom-up budget, against the marine boundary layer growth rate"
