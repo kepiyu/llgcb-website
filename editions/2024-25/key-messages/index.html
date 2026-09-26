@@ -8,8 +8,7 @@
   <meta name="description" content="The twice-yearly update revealing the latest changes in the land and ocean carbon sinks">
   <meta property="og:title" content="Low-latency Global Carbon Budget | Key Messages from Budget 2024–25">
   <meta property="og:description" content="The twice-yearly update revealing the latest changes in the land and ocean carbon sinks">
-  <meta property="og:image" content="../../../static/img/photos/hero_ed-2024-25.jpg">
-  <link rel="stylesheet" href="../../../static/css/site.css?v=8c092e89">
+<meta property="og:image" content="https://kepiyu.github.io/llgcb-website/static/img/photos/hero_ed-2024-25.jpg">  <link rel="stylesheet" href="../../../static/css/site.css?v=1e6bc4bb">
   <link rel="icon" href="../../../static/img/favicon.svg" type="image/svg+xml">
 </head>
 <body class="page-key-messages" data-root="../../../">
@@ -19,7 +18,7 @@
     <div class="container">
       <div class="alert">
         <a href="../../../news/">
-          <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 2a5 5 0 0 0-5 5v3.2L3.3 13a.7.7 0 0 0 .6 1.1h12.2a.7.7 0 0 0 .6-1.1L15 10.2V7a5 5 0 0 0-5-5zm-2 13.5a2 2 0 0 0 4 0" fill="none" stroke="#000" stroke-width="1.6" stroke-linejoin="round"/></svg>View our latest news
+          <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 2a5 5 0 0 0-5 5v3.2L3.3 13a.7.7 0 0 0 .6 1.1h12.2a.7.7 0 0 0 .6-1.1L15 10.2V7a5 5 0 0 0-5-5z" fill="#000"/><circle cx="10" cy="16.2" r="2" fill="#000"/></svg>View our latest news
         </a>
       </div>
       <div class="link"><span class="pill">Preview build: includes budgets still in review</span></div>
@@ -35,7 +34,7 @@
       <div class="container">
         <nav class="menu-1" aria-label="Main">
           <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
-            <svg viewBox="0 0 30 30" aria-hidden="true" focusable="false"><path d="M4 8h22M4 15h22M4 22h22" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 30 30" aria-hidden="true" focusable="false"><path d="M1 5h28M1 15h28M1 25h28" stroke="#fff" stroke-width="5"/></svg>
             <span class="visually-hidden">Menu</span>
           </button>
           <ul id="site-menu">
@@ -68,6 +67,8 @@
           <ul id="breadcrumbs">
             <li><a href="../../../">Home</a></li>
             <li class="separator" aria-hidden="true">›</li>
+            <li><a href="../../../archive/">Archive</a></li>
+            <li class="separator" aria-hidden="true">›</li>
             <li><a href="../../../editions/2024-25/">Budget 2024–25</a></li>
             <li class="separator" aria-hidden="true">›</li>
             <li><strong>Key messages</strong></li>
@@ -88,7 +89,8 @@
 <li>The CO₂ growth rate was 2.62 ± 0.08 ppm yr⁻¹ from July 2024 to June 2025, down from 3.66 ppm yr⁻¹ during the El Niño but 6.5% above the 2013–2022 July-to-June mean.</li><li>Combining bottom-up and top-down estimates, the net land sink was 1.06 ± 0.40 GtC yr⁻¹: stronger than in 2023/24, but 0.49 GtC yr⁻¹ weaker than the 2015–2022 mean.</li><li>The annual land anomaly was dominated by late-2024 losses: in the DGVMs, July–December 2024 accounted for 86% of the annual deficit.</li><li>Early-2025 recovery is method-dependent: DGVMs retain a weak deficit, whereas all inversions indicate fluxes close to the reference mean and a stronger-than-normal northern sink in late spring 2025.</li><li>Ocean uptake shows no global weakening. Temperature explains most of the global land-flux variability, while terrestrial water storage matters more regionally.</li>    </ol>
 
     <h2><strong>The budget at a glance</strong></h2>
-    <table>
+    <div class="table-scroll">
+    <table class="glance">
       <thead><tr><th scope="col">Quantity</th><th scope="col">July 2024–June 2025</th><th scope="col">Notes</th></tr></thead>
       <tbody>
         <tr><th scope="row">Atmospheric CO₂ growth rate</th><td>2.62 ± 0.08 ppm yr⁻¹</td><td>NOAA marine boundary layer, July–June; 6.5% above the 2013–2022 mean</td></tr>
@@ -98,6 +100,7 @@
         <tr><th scope="row">Budget imbalance</th><td>1.05 ± 0.70 GtC yr⁻¹</td><td>95% interval −0.44 to 2.23, not significantly different from zero</td></tr>
       </tbody>
     </table>
+    </div>
     <p class="note">Values as published, for July 2024–June 2025. Uncertainties are ±1σ; the budget imbalance uncertainty comes from Monte Carlo propagation.</p>
 
     <h2><strong>Models and data used</strong></h2>
@@ -105,8 +108,8 @@
 <li><strong>Fossil CO₂ emissions.</strong> Carbon Monitor and the Global Carbon Budget method; monthly split from IEA-EDGAR</li><li><strong>Atmospheric growth rate.</strong> NOAA MBL (June–July); OCO-2 and GRESO growth rates in a sensitivity test</li><li><strong>Land, bottom-up.</strong> 3 DGVMs driven by ERA5: JULES, ORCHIDEE, LPJ-EOSIM; emulators of 20 GCB 2025 DGVMs as a benchmark</li><li><strong>Ocean, bottom-up.</strong> Machine-learning emulators of 10 ocean models and 9 data products (GCB 2025)</li><li><strong>Top-down.</strong> 4 OCO-2 inversions: CAMS, CMS-Flux, GONGGA, CTE</li><li><strong>Anomaly reference.</strong> 2015–2022, July–June windows</li>    </ul>
 
     <h2><strong>Publication</strong></h2>
-    <p>Ke P, Ciais P, Yao Y, Sitch S, Li W, Du X, et al. Low Latency Global Carbon Budget Reveals Late 2024 Carbon Losses and Contrasting Early 2025 Land Sink Recovery Signals. <em>Advanced Science</em>, Adv Sci 2026: e77369. <a href="https://doi.org/10.1002/advs.77369">https://doi.org/10.1002/advs.77369</a></p>
-    <p><a class="btn" href="../">Back to the Jul 2024–Jun 2025 budget</a></p>
+    <p>Ke P, Ciais P, Yao Y, Sitch S, Li W, Du X, et al. Low Latency Global Carbon Budget Reveals Late 2024 Carbon Losses and Contrasting Early 2025 Land Sink Recovery Signals. Adv Sci 2026: e77369. <a href="https://doi.org/10.1002/advs.77369">https://doi.org/10.1002/advs.77369</a></p>
+    <p><a class="btn" href="../">Back to the 2024–25 budget</a></p>
   </div>
 </section>
   </main>
@@ -133,7 +136,7 @@
     </div>
   </div>
 
-  <script src="../../../static/search-index.js?v=8c092e89" defer></script>
-  <script src="../../../static/js/site.js?v=8c092e89" defer></script>
+  <script src="../../../static/search-index.js?v=1e6bc4bb" defer></script>
+  <script src="../../../static/js/site.js?v=1e6bc4bb" defer></script>
 </body>
 </html>

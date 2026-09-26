@@ -239,7 +239,7 @@
 
       var every = band < 30 ? (band < 18 ? 5 : 2) : 1;
       allYears.forEach(function (yr, j) {
-        if (j % every === 0 || j === n - 1) {
+        if ((j % every === 0 && n - 1 - j >= every) || j === n - 1) {
           svg('text', { x: m.l + band * (j + 0.5), y: H - m.b + 18, 'text-anchor': 'middle', 'class': 'viz-tick' }, s)
             .textContent = every > 1 ? String(yr) : (band < 40 ? "'" + String(yr).slice(2) : String(yr));
         }
@@ -372,7 +372,7 @@
       yAxis(svg('g', null, s), dom, y, m.l, m.l + iw);
       var step = iw / (years.length - 1) < 34 ? 5 : 2;
       years.forEach(function (yr, i) {
-        if ((yr % step === 0) || i === years.length - 1) {
+        if ((yr % step === 0 && years[years.length - 1] - yr >= step) || i === years.length - 1) {
           svg('text', { x: x(yr), y: H - m.b + 18, 'text-anchor': 'middle', 'class': 'viz-tick' }, s).textContent = String(yr);
         }
       });
@@ -452,7 +452,7 @@
     legend(fig, [
       { label: 'NOAA marine boundary layer', color: C.atm, key: 'rect' },
       { label: 'OCO-2 inversions', color: C.td, key: 'dot' },
-      { label: 'GRESO (OCO-2)', color: C.ink, key: 'diamond' },
+      { label: 'GRESO (OCO-2 and GOSAT)', color: C.ink, key: 'diamond' },
       { label: d.ref_label + ' (' + fmt(d.ref_mean) + ')', color: C.ink2, key: 'line' }
     ]);
 

@@ -1,6 +1,6 @@
-edition,period,quantity,value,uncertainty_1sigma,unit,note
-Jul 2023–Jun 2024,July 2023–June 2024,Atmospheric CO₂ growth rate,3.66,0.09,ppm yr⁻¹,"NOAA marine boundary layer, July–June; highest since 1979"
-Jul 2023–Jun 2024,July 2023–June 2024,Fossil CO₂ emissions,10.14,,GtC yr⁻¹,Range 10.14–10.15 across two estimates
-Jul 2023–Jun 2024,July 2023–June 2024,Net land flux,-0.34,0.33,GtC yr⁻¹,A net source. DGVMs −0.59 ± 0.60; inversions −0.09 ± 0.26 (negative = source)
-Jul 2023–Jun 2024,July 2023–June 2024,Ocean sink,2.56,0.33,GtC yr⁻¹,Emulators 2.87 ± 0.56; inversions 2.25 ± 0.33
-Jul 2023–Jun 2024,July 2023–June 2024,Budget imbalance,0.09,,GtC yr⁻¹,"Bottom-up budget, against the marine boundary layer growth rate"
+﻿edition,period,quantity,value,uncertainty_1sigma,unit,note
+2023-24,July 2023–June 2024,Atmospheric CO₂ growth rate,3.66,0.09,ppm yr⁻¹,"NOAA marine boundary layer, July–June; highest since 1979"
+2023-24,July 2023–June 2024,Fossil CO₂ emissions,10.14,,GtC yr⁻¹,Range 10.14–10.15 across two estimates
+2023-24,July 2023–June 2024,Net land flux,-0.34,0.33,GtC yr⁻¹,A net source. DGVMs -0.59 ± 0.60; inversions -0.09 ± 0.26 (negative = source)
+2023-24,July 2023–June 2024,Ocean sink,2.56,0.33,GtC yr⁻¹,Emulators 2.87 ± 0.56; inversions 2.25 ± 0.33
+2023-24,July 2023–June 2024,Budget imbalance,0.09,,GtC yr⁻¹,"Bottom-up budget, against the marine boundary layer growth rate"

@@ -8,8 +8,7 @@
   <meta name="description" content="The twice-yearly update revealing the latest changes in the land and ocean carbon sinks">
   <meta property="og:title" content="Low-latency Global Carbon Budget | Key Messages from Budget 2024">
   <meta property="og:description" content="The twice-yearly update revealing the latest changes in the land and ocean carbon sinks">
-  <meta property="og:image" content="../../../static/img/photos/hero_ed-2024.jpg">
-  <link rel="stylesheet" href="../../../static/css/site.css?v=8c092e89">
+<meta property="og:image" content="https://kepiyu.github.io/llgcb-website/static/img/photos/hero_ed-2024.jpg">  <link rel="stylesheet" href="../../../static/css/site.css?v=1e6bc4bb">
   <link rel="icon" href="../../../static/img/favicon.svg" type="image/svg+xml">
 </head>
 <body class="page-key-messages" data-root="../../../">
@@ -19,7 +18,7 @@
     <div class="container">
       <div class="alert">
         <a href="../../../news/">
-          <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 2a5 5 0 0 0-5 5v3.2L3.3 13a.7.7 0 0 0 .6 1.1h12.2a.7.7 0 0 0 .6-1.1L15 10.2V7a5 5 0 0 0-5-5zm-2 13.5a2 2 0 0 0 4 0" fill="none" stroke="#000" stroke-width="1.6" stroke-linejoin="round"/></svg>View our latest news
+          <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 2a5 5 0 0 0-5 5v3.2L3.3 13a.7.7 0 0 0 .6 1.1h12.2a.7.7 0 0 0 .6-1.1L15 10.2V7a5 5 0 0 0-5-5z" fill="#000"/><circle cx="10" cy="16.2" r="2" fill="#000"/></svg>View our latest news
         </a>
       </div>
       <div class="link"><span class="pill">Preview build: includes budgets still in review</span></div>
@@ -35,7 +34,7 @@
       <div class="container">
         <nav class="menu-1" aria-label="Main">
           <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
-            <svg viewBox="0 0 30 30" aria-hidden="true" focusable="false"><path d="M4 8h22M4 15h22M4 22h22" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 30 30" aria-hidden="true" focusable="false"><path d="M1 5h28M1 15h28M1 25h28" stroke="#fff" stroke-width="5"/></svg>
             <span class="visually-hidden">Menu</span>
           </button>
           <ul id="site-menu">
@@ -68,6 +67,8 @@
           <ul id="breadcrumbs">
             <li><a href="../../../">Home</a></li>
             <li class="separator" aria-hidden="true">›</li>
+            <li><a href="../../../archive/">Archive</a></li>
+            <li class="separator" aria-hidden="true">›</li>
             <li><a href="../../../editions/2024/">Budget 2024</a></li>
             <li class="separator" aria-hidden="true">›</li>
             <li><strong>Key messages</strong></li>
@@ -88,16 +89,18 @@
 <li>The CO₂ growth rate from the NOAA marine boundary layer network reached a record 3.73 ± 0.08 ppm yr⁻¹, a 38% increase over 2023, while fossil CO₂ emissions increased by only 0.85%.</li><li>The DGVMs estimate a net land source of 0.65 ± 0.85 GtC yr⁻¹, the weakest net land flux since 1987; the OCO-2 inversions give a small sink of 0.29 ± 0.80 GtC yr⁻¹.</li><li>Tropical lands were a net source of 1.26 GtC yr⁻¹ (DGVMs) and 0.95 GtC yr⁻¹ (inversions); the Amazon (drought and fires) and central Africa had the largest source anomalies.</li><li>The northern land sink (north of 30°N) continued its decline since 2015, to 0.90 GtC yr⁻¹.</li><li>Fire emissions were 0.50 GtC yr⁻¹ above the 2015–2022 mean, about 20% of the land-sink reduction.</li>    </ol>
 
     <h2><strong>The budget at a glance</strong></h2>
-    <table>
+    <div class="table-scroll">
+    <table class="glance">
       <thead><tr><th scope="col">Quantity</th><th scope="col">January–December 2024</th><th scope="col">Notes</th></tr></thead>
       <tbody>
         <tr><th scope="row">Atmospheric CO₂ growth rate</th><td>3.73 ± 0.08 ppm yr⁻¹</td><td>NOAA marine boundary layer; record high since 1959</td></tr>
         <tr><th scope="row">Fossil CO₂ emissions</th><td>10.19 ± 0.01 GtC yr⁻¹</td><td>+0.85% compared with 2023</td></tr>
-        <tr><th scope="row">Net land flux</th><td>−0.65 ± 0.85 GtC yr⁻¹</td><td>DGVMs: a net source, the weakest since 1987. OCO-2 inversions: a sink of 0.29 ± 0.80</td></tr>
+        <tr><th scope="row">Net land flux (DGVMs)</th><td>−0.65 ± 0.85 GtC yr⁻¹</td><td>DGVMs: a net source, the weakest since 1987. OCO-2 inversions: a sink of 0.29 ± 0.80. The paper gives the mean of DGVMs and inversions as 0.18 ± 0.58</td></tr>
         <tr><th scope="row">Ocean sink</th><td>2.48 ± 0.29 GtC yr⁻¹</td><td>Emulators 2.66 ± 0.55; inversions 2.30 ± 0.19</td></tr>
         <tr><th scope="row">Budget imbalance</th><td>0.26 ± 1.03 GtC yr⁻¹</td><td>Bottom-up budget, against the marine boundary layer growth rate</td></tr>
       </tbody>
     </table>
+    </div>
     <p class="note">Values as published. Uncertainties are ±1σ across ensemble members. The ocean sink excludes the river-flux adjustment used in the Global Carbon Budget.</p>
 
     <h2><strong>Models and data used</strong></h2>
@@ -105,7 +108,7 @@
 <li><strong>Fossil CO₂ emissions.</strong> Carbon Monitor and Global Carbon Budget 2024 projections</li><li><strong>Atmospheric growth rate.</strong> NOAA MBL; OCO-2 GRESO and inversion-implied growth as cross-checks</li><li><strong>Land, bottom-up.</strong> 4 DGVMs driven by ERA5: JULES, OCN, ORCHIDEE-MICT, LPJ-EOSIM; SiB4 (CTE-HR) as a cross-check</li><li><strong>Ocean, bottom-up.</strong> Machine-learning emulators of ocean models and data products</li><li><strong>Top-down.</strong> 3 OCO-2 inversions: CAMS, CMS-Flux, GONGGA</li><li><strong>Anomaly reference.</strong> 2015–2022</li>    </ul>
 
     <h2><strong>Publication</strong></h2>
-    <p>Ciais P, Ke P, Yao Y, Sitch S, Li W, Xu Y, et al. Low latency global carbon budget indicates reduced land carbon sink in the year 2024. <em>National Science Review</em>, Natl Sci Rev 2026; 13(2): nwaf594. <a href="https://doi.org/10.1093/nsr/nwaf594">https://doi.org/10.1093/nsr/nwaf594</a></p>
+    <p>Ciais P, Ke P, Yao Y, Sitch S, Li W, Xu Y, et al. Low latency global carbon budget indicates reduced land carbon sink in the year 2024. Natl Sci Rev 2026; 13(2): nwaf594. <a href="https://doi.org/10.1093/nsr/nwaf594">https://doi.org/10.1093/nsr/nwaf594</a></p>
     <p><a class="btn" href="../">Back to the 2024 budget</a></p>
   </div>
 </section>
@@ -133,7 +136,7 @@
     </div>
   </div>
 
-  <script src="../../../static/search-index.js?v=8c092e89" defer></script>
-  <script src="../../../static/js/site.js?v=8c092e89" defer></script>
+  <script src="../../../static/search-index.js?v=1e6bc4bb" defer></script>
+  <script src="../../../static/js/site.js?v=1e6bc4bb" defer></script>
 </body>
 </html>

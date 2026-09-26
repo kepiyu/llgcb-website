@@ -1,6 +1,6 @@
-edition,period,quantity,value,uncertainty_1sigma,unit,note
-2025,January–December 2025,Atmospheric CO₂ growth rate,2.06,0.09,ppm yr⁻¹,NOAA marine boundary layer; 3.76 ± 0.09 in 2024 (−45%)
+﻿edition,period,quantity,value,uncertainty_1sigma,unit,note
+2025,January–December 2025,Atmospheric CO₂ growth rate,2.06,0.09,ppm yr⁻¹,NOAA marine boundary layer; 3.76 ± 0.09 in 2024 (-45%)
 2025,January–December 2025,Fossil CO₂ emissions,10.38,,GtC yr⁻¹,+0.7% compared with 2024
 2025,January–December 2025,Net land sink,2.36,0.16,GtC yr⁻¹,Mean of DGVMs (2.04 ± 0.24) and inversions (2.68 ± 0.20); +2.81 ± 0.31 compared with 2024
 2025,January–December 2025,Ocean sink,3.11,0.36,GtC yr⁻¹,Emulators 3.15 ± 0.65; inversions 3.06 ± 0.32
-2025,January–December 2025,Budget imbalance,0.81,0.69,GtC yr⁻¹,"95% interval −0.66 to 1.91, not significantly different from zero"
+2025,January–December 2025,Budget imbalance,0.81,0.69,GtC yr⁻¹,"95% interval -0.66 to 1.91, not significantly different from zero"

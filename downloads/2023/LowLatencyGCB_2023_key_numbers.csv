@@ -1,6 +1,6 @@
-edition,period,quantity,value,uncertainty_1sigma,unit,note
+﻿edition,period,quantity,value,uncertainty_1sigma,unit,note
 2023,January–December 2023,Atmospheric CO₂ growth rate,2.82,0.08,ppm yr⁻¹,NOAA marine boundary layer; 3.37 ± 0.11 at Mauna Loa (record high)
 2023,January–December 2023,Fossil CO₂ emissions,10.20,0.05,GtC yr⁻¹,+0.1% to +1.1% compared with 2022
 2023,January–December 2023,Net land sink,0.44,0.21,GtC yr⁻¹,Mean of DGVMs (0.14 ± 0.28) and OCO-2 inversion (0.73 ± 0.30)
-2023,January–December 2023,Ocean sink,2.60,0.72,GtC yr⁻¹,Ocean model emulators; OCO-2 inversion 2.33 ± 0.20
+2023,January–December 2023,Ocean sink (emulators),2.60,0.72,GtC yr⁻¹,Ocean model emulators; OCO-2 inversion 2.33 ± 0.20
 2023,January–December 2023,Budget imbalance,1.26,,GtC yr⁻¹,Against the marine boundary layer growth rate; 0.09 against Mauna Loa
