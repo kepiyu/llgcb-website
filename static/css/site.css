@@ -99,12 +99,12 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 }
 
 .branding { position: absolute; top: 50px; left: 0; right: 0; z-index: 0; padding: 10px; display: flex; justify-content: center; }
-.branding .brand { flex: 0 0 25%; display: flex; justify-content: center; align-items: center; }
-.branding .brand img { display: block; margin: 0 auto; max-height: 70px; max-width: 100%; padding: 5px 0; filter: drop-shadow(10px 1px 14px #212D49); }
+.branding .brand { flex: 1 1 0; max-width: 25%; display: flex; justify-content: center; align-items: center; }
+.branding .brand img { display: block; margin: 0 auto; max-height: 48px; max-width: 80%; padding: 5px 0; filter: drop-shadow(10px 1px 14px #212D49); }
 @media (max-width: 768px) {
   .branding { flex-wrap: wrap; top: 56px; }
-  .branding .brand { flex: 0 0 50%; height: 65px; }
-  .branding .brand img { max-height: 50px; }
+  .branding .brand { flex: 0 0 33.33%; max-width: 33.33%; height: 50px; }
+  .branding .brand img { max-height: 34px; }
 }
 
 .splash-center-bottom { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; width: 100%; text-align: center; color: #fff; animation: fadein 5s; }
@@ -126,6 +126,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .intro { font-size: 24px; color: var(--grey-text); margin-top: 20px; }
 .intro p { margin: 0; }
 @media (min-width: 992px) { .pinch80 { width: 80%; margin: 0 auto; } .home .intro { width: 85%; margin: 0 auto; } .pinch { width: 70%; margin: 24px auto 0; } }
+.home .intro { font-size: 20px; }
+.home .pinch { font-size: 17px; }
 @media (max-width: 768px) { .intro { font-size: 20px; } .padding2, .padding3, .padding4, .padding5 { padding: 20px; } }
 
 .cards .row { display: flex; flex-wrap: wrap; }
@@ -144,6 +146,17 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .dark { background-color: var(--slate); color: #fff; }
 .shadowed.dark h2, .shadowed.dark p { color: #fff; }
 @media (max-width: 768px) { .shadowed h2 { font-size: 25px; } }
+
+/* release boxes on the home page */
+.shadowed .text p.ref { font-size: 16px; font-style: italic; color: var(--grey-text); margin-top: 12px; }
+.shadowed.dark .text p.ref { color: #cfd3da; }
+
+/* paper figure on edition pages */
+.paper-figure { margin: 30px 0 40px; }
+.paper-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+.paper-figure figcaption { font-size: 16px; color: var(--grey-text); margin-top: 10px; }
+.paper-figure .credit { color: var(--meta); }
+.content p.reference { font-size: 17px; }
 
 /* ------------------------------------------------------------------ pill button */
 .btn {
@@ -218,7 +231,7 @@ footer.light { background: var(--yellow); color: #000; padding: 3% 0; }
 footer.light p { margin: 0; }
 footer.light a { color: #000; text-decoration: none; }
 footer .foot-brand { text-align: center; }
-footer .foot-brand img { height: 66px; width: auto; }
+footer .foot-brand a { font-size: 26px; font-weight: 400; letter-spacing: .5px; }
 footer .world { margin: 20px 0 10px; }
 footer .world svg { width: 100%; height: auto; max-height: 310px; opacity: .8; display: block; }
 footer .links { text-align: center; }
