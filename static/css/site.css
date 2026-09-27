@@ -153,7 +153,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 
 /* paper figure on edition pages */
 .paper-figure { margin: 30px 0 40px; }
-.paper-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+.paper-figure img { display: block; max-width: 100%; max-height: 900px; width: auto; height: auto; margin: 0 auto; }
 .paper-figure figcaption { font-size: 16px; color: var(--grey-text); margin-top: 10px; }
 .paper-figure .credit { color: var(--meta); }
 .content p.reference { font-size: 17px; }
