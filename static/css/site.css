@@ -238,6 +238,11 @@ footer .links { text-align: center; }
 footer .links a { margin-right: 20px; }
 @media (max-width: 768px) { footer.light { padding-top: 30px; font-size: 18px; text-align: center; } footer .links a { display: block; margin: 0 0 10px; } }
 
+.host-brand { text-align: center; padding: 50px 20px; background: #fff; }
+.host-brand img { height: 90px; width: auto; }
+@media (max-width: 768px) { .host-brand img { height: 64px; } }
+footer .world { margin-top: 10px; }
+
 /* back to top */
 #top { position: fixed; bottom: 14px; right: 20px; z-index: 99; display: none; background: transparent; color: #000; opacity: .5; font: 300 17px var(--font); border: 0; padding: 12px; border-radius: 12px; cursor: pointer; animation: fadein 2.2s; }
 #top:hover { opacity: 1; }
