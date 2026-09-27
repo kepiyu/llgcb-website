@@ -241,6 +241,12 @@ footer .links a { margin-right: 20px; }
 .overlay .results span { display: block; font-size: 15px; opacity: .75; }
 @media (max-width: 768px) { .overlay input, .overlay .results { width: 100%; } .overlay input { font-size: 22px; padding: 14px 24px; } }
 
+/* embedded video (16:9), as on globalcarbonbudget.org */
+.video-wrapper { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; }
+.video-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-note { font-size: 14px; font-weight: 400; color: var(--meta); margin: 10px 0 0; }
+.edition-video { margin: 50px 0 10px; }
+
 /* FAQ: space above each question, as on GCB */
 .page-faq .content h2 { margin-top: 60px; }
 .page-faq .content h2:first-child { margin-top: 10px; }
