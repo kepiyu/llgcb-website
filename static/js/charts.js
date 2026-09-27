@@ -1,4 +1,4 @@
-/* Low-latency Global Carbon Budget — interactive charts.
+/* Low latency Global Carbon Budget — interactive charts.
  *
  * Dependency-free SVG charts. Data come from the page's <script id="chart-data" type="application/json">,
  * written by build.py. Conventions: sinks positive; GtC per year unless stated.

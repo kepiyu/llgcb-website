@@ -1,4 +1,4 @@
-/* Low-latency Global Carbon Budget: navigation toggle, site search overlay and back-to-top button. */
+/* Low latency Global Carbon Budget: navigation toggle, site search overlay and back-to-top button. */
 (function () {
   'use strict';
   var root = document.body.getAttribute('data-root') || './';
