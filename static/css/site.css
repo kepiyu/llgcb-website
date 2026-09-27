@@ -100,11 +100,11 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 
 .branding { position: absolute; top: 50px; left: 0; right: 0; z-index: 0; padding: 10px; display: flex; justify-content: center; }
 .branding .brand { flex: 1 1 0; max-width: 25%; display: flex; justify-content: center; align-items: center; }
-.branding .brand img { display: block; margin: 0 auto; max-height: 48px; max-width: 80%; padding: 5px 0; filter: drop-shadow(10px 1px 14px #212D49); }
+.branding .brand img { display: block; margin: 0 auto; max-height: 58px; max-width: 86%; padding: 5px 0; filter: drop-shadow(10px 1px 14px #212D49); }
 @media (max-width: 768px) {
   .branding { flex-wrap: wrap; top: 56px; }
   .branding .brand { flex: 0 0 33.33%; max-width: 33.33%; height: 50px; }
-  .branding .brand img { max-height: 34px; }
+  .branding .brand img { max-height: 40px; }
 }
 
 .splash-center-bottom { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; width: 100%; text-align: center; color: #fff; animation: fadein 5s; }
