@@ -29,15 +29,43 @@
   function svg(tag, attrs, parent) {
     var e = document.createElementNS(NS, tag);
     if (attrs) Object.keys(attrs).forEach(function (k) {
-      if (attrs[k] !== undefined && attrs[k] !== null) e.setAttribute(k, attrs[k]);
+      if (attrs[k] !== undefined && attrs[k] !== null) e.setAttribute(k, typeof attrs[k] === 'string' ? plain(attrs[k]) : attrs[k]);
     });
     if (parent) parent.appendChild(e);
+    return e;
+  }
+  // Unicode sub/superscripts in labels (CO₂, yr⁻¹) are drawn as real <sub>/<sup> (HTML) or shifted
+  // <tspan>s (SVG), because Gill Sans has no glyphs for them. Text is still inserted as text nodes.
+  var SUB = '₀₁₂₃₄₅₆₇₈₉', SUP = '⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺', SUPOUT = '0123456789−+';
+  var RUN = /([₀-₉]+)|([⁰¹²³⁴-⁹⁻⁺]+)/g;
+  function conv(s, from, to) { return s.replace(/./g, function (c) { var i = from.indexOf(c); return i < 0 ? c : to.charAt(i); }); }
+  var ANY = /[₀-₉⁰¹²³⁴-⁹⁻⁺]/;
+  function plain(s) { return ANY.test(s) ? conv(conv(s, SUB, '0123456789'), SUP, '0123456789-+') : s; }
+  function rich(e, s, isSvg) {
+    s = String(s); e.textContent = '';
+    var last = 0, m;
+    RUN.lastIndex = 0;
+    while ((m = RUN.exec(s))) {
+      if (m.index > last) e.appendChild(document.createTextNode(s.slice(last, m.index)));
+      var sub = !!m[1], t = sub ? conv(m[1], SUB, '0123456789') : conv(m[2], SUP, SUPOUT), x;
+      if (isSvg) {
+        x = document.createElementNS(NS, 'tspan');
+        x.setAttribute('baseline-shift', sub ? 'sub' : 'super');
+        x.setAttribute('font-size', '70%');
+      } else {
+        x = document.createElement(sub ? 'sub' : 'sup');
+      }
+      x.textContent = t;
+      e.appendChild(x);
+      last = RUN.lastIndex;
+    }
+    if (last < s.length) e.appendChild(document.createTextNode(s.slice(last)));
     return e;
   }
   function html(tag, cls, parent, text) {
     var e = document.createElement(tag);
     if (cls) e.className = cls;
-    if (text !== undefined && text !== null) e.textContent = text;
+    if (text !== undefined && text !== null) rich(e, text, false);
     if (parent) parent.appendChild(e);
     return e;
   }
@@ -557,7 +585,7 @@
         var dom = niceDomain(lo, hi, 3);
         var y = linear(dom.lo, dom.hi, top + ph, top);
         scales.push(y);
-        svg('text', { x: m.l, y: top - 8, 'class': 'viz-direct' }, s).textContent = p.label + ' (' + p.unit + ')';
+        rich(svg('text', { x: m.l, y: top - 8, 'class': 'viz-direct' }, s), p.label + ' (' + p.unit + ')', true);
         yAxis(svg('g', null, s), dom, y, m.l, m.l + iw);
         if (p.bands) {
           p.bands.forEach(function (b) {

@@ -40,6 +40,9 @@ h2 { font-size: 32px; font-weight: 300; }
 h3 { font-size: 21px; }
 h4 { font-size: 20px; padding-bottom: 12px; }
 b, strong { font-weight: 600; }
+sub, sup { position: relative; font-size: 70%; line-height: 0; vertical-align: baseline; }
+sup { top: -.5em; }
+sub { bottom: -.25em; }
 p { margin: 19px 0; }
 a { color: inherit; opacity: 1; transition: opacity .25s ease-in-out; }
 a:hover { opacity: .5; transition: .2s linear; }
