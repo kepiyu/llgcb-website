@@ -231,7 +231,7 @@ footer.light { background: var(--yellow); color: #000; padding: 45px 0 35px; }
 footer.light p { margin: 0; }
 footer.light a { color: #000; text-decoration: none; }
 footer .world { margin: 20px 0 10px; }
-footer .world svg { width: 100%; height: auto; max-height: 250px; opacity: .8; display: block; }
+footer .world svg { width: 100%; height: auto; max-height: 150px; opacity: .8; display: block; }
 footer .foot-title { text-align: center; margin-bottom: 26px; }
 footer .foot-title > a { display: block; font-size: 28px; font-weight: 400; letter-spacing: .3px; }
 footer .foot-title span { display: block; font-size: 17px; margin-top: 6px; }
