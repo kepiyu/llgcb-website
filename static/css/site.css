@@ -3,9 +3,10 @@
    yellow pill buttons), with light neutral top bar and footer instead of GCB's yellow ones. Values re-implemented from that site's published styles. */
 
 :root {
-  --yellow: #FACF1F;
-  --gold: #edc217;
-  --glass: rgba(237, 194, 23, .333);
+  /* Accent (user, 2026-09-28): dark olive-brown for buttons, bullets and the nav tint; replaces GCB yellow. */
+  --yellow: #6B5A20;       /* pill buttons, chart toggle, notice rule (name kept from the GCB-based stylesheet) */
+  --gold: #6B5A20;         /* square bullets */
+  --glass: rgba(107, 90, 32, .45);
   --bar: #F1F0EA;          /* top news bar and footer: light warm neutral (theme option E, 2026-09-28) */
   --map: #6B5A20;          /* footer world map */
   --slate: #303642;
@@ -50,7 +51,7 @@ a { color: inherit; opacity: 1; transition: opacity .25s ease-in-out; }
 a:hover { opacity: .5; transition: .2s linear; }
 a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #2a78d6; outline-offset: 2px; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.skip-link { position: absolute; left: 10px; top: -60px; z-index: 100; background: var(--yellow); color: #000; padding: 6px 14px; border-radius: 30px; font-weight: 500; }
+.skip-link { position: absolute; left: 10px; top: -60px; z-index: 100; background: var(--yellow); color: #fff; padding: 6px 14px; border-radius: 30px; font-weight: 500; }
 .skip-link:focus { top: 8px; }
 .text-center { text-align: center; }
 
@@ -117,7 +118,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 #breadcrumbs { list-style: none; margin: 10px 0; padding: 0; overflow: hidden; }
 #breadcrumbs li { display: inline-block; vertical-align: middle; margin-right: 15px; }
 #breadcrumbs a { color: #fff; text-decoration: none; }
-#breadcrumbs .separator { font-size: 18px; font-weight: 400; color: var(--gold); }
+#breadcrumbs .separator { font-size: 18px; font-weight: 400; color: #E6DDB8; }
 @media (max-width: 768px) { #breadcrumbs { display: none; } h1 { font-size: 30px; } h2 { font-size: 25px; } .breadcrumbs { padding: 20px; } }
 
 .photo-credit { position: absolute; right: 10px; bottom: 6px; margin: 0; z-index: 2; font-size: 12px; font-weight: 400; color: rgba(255, 255, 255, .78); text-shadow: 0 1px 3px rgba(0, 0, 0, .6); }
@@ -162,9 +163,9 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 
 /* ------------------------------------------------------------------ pill button */
 .btn {
-  display: inline-block; background-color: var(--yellow); color: #000; text-decoration: none; border: none; border-radius: 30px;
+  display: inline-block; background-color: var(--yellow); color: #fff; text-decoration: none; border: none; border-radius: 30px;
   padding: 2px 40px 5px 20px; font-size: inherit; font-weight: 500; margin: 0 10px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 13'%3E%3Cpath d='M1.2 1l5.3 5.5-5.3 5.5' fill='none' stroke='%23000' stroke-width='2'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 13'%3E%3Cpath d='M1.2 1l5.3 5.5-5.3 5.5' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E");
   background-size: 8px; background-repeat: no-repeat; background-position: 94% 55%; cursor: pointer;
 }
 .btn:hover { opacity: 1; }
@@ -198,7 +199,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 10px 0 20px; }
 .content .table-scroll > table { margin: 0; min-width: 36em; }
 .content table.glance td:nth-child(2) { white-space: nowrap; }
-.notice { background: #fff6cc; border-left: 4px solid var(--yellow); padding: 10px 16px; font-size: 17px; font-weight: 400; }
+.notice { background: #F5F1E4; border-left: 4px solid var(--yellow); padding: 10px 16px; font-size: 17px; font-weight: 400; }
 @media (max-width: 768px) { .content { padding: 20px; } }
 
 /* two-column resource grid (edition pages) */
@@ -216,6 +217,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .panel .tag { color: #c3c8d1; font-weight: 300; }
 .panel .pills p { margin: 0 0 12px; }
 .panel .btn { margin-left: 0; }
+.panel .btn, .shadowed.dark .btn { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .28); }
 .panel > :first-child { padding-left: 32px; }
 @media (max-width: 767px) { .panel { grid-template-columns: 1fr; margin: 20px 0 0; padding: 20px; gap: 10px; } .panel > :first-child { padding-left: 0; } }
 
@@ -301,7 +303,7 @@ footer .foot-links span { margin: 0 12px; opacity: .6; }
 .link-btn { background: none; border: 0; padding: 0; font: 500 17px var(--font); color: #000; border-bottom: 1px solid; cursor: pointer; text-decoration: none; }
 .seg { display: inline-flex; gap: 8px; flex-wrap: wrap; }
 .seg button { font: 500 16px var(--font); border: 1px solid #000; background: #fff; color: #000; border-radius: 30px; padding: 3px 18px 5px; cursor: pointer; }
-.seg button[aria-pressed="true"] { background: var(--yellow); border-color: var(--yellow); }
+.seg button[aria-pressed="true"] { background: var(--yellow); border-color: var(--yellow); color: #fff; }
 .seg-sub { font-weight: 300; }
 .viz-legend { display: flex; flex-wrap: wrap; gap: 6px 20px; list-style: none; padding: 0; margin: 0 0 10px; font-size: 16px; }
 .content .viz-legend li { margin: 0; }
