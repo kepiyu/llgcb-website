@@ -1,11 +1,13 @@
 /* Low latency Global Carbon Budget
-   Visual system follows globalcarbonbudget.org (Gill Sans, yellow bars, glass navigation over a photo,
-   photo cards, yellow pill buttons, yellow footer). Values re-implemented from that site's published styles. */
+   Visual system follows globalcarbonbudget.org (Gill Sans, glass navigation over a photo, photo cards,
+   yellow pill buttons), with light neutral top bar and footer instead of GCB's yellow ones. Values re-implemented from that site's published styles. */
 
 :root {
   --yellow: #FACF1F;
   --gold: #edc217;
   --glass: rgba(237, 194, 23, .333);
+  --bar: #F1F0EA;          /* top news bar and footer: light warm neutral (theme option E, 2026-09-28) */
+  --map: #6B5A20;          /* footer world map */
   --slate: #303642;
   --ink: #000;
   --grey-text: #444;
@@ -61,7 +63,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .padding4 { padding: 40px; } .padding5 { padding: 50px; }
 
 /* ------------------------------------------------------------------ top news bar */
-.top { background: var(--yellow); color: #000; font-size: 15px; font-weight: 400; padding: 5px 10px 7px; }
+.top { background: var(--bar); color: #000; font-size: 15px; font-weight: 400; padding: 5px 10px 7px; }
 .top .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .top a { color: #000; text-decoration: none; }
 .top .alert { display: inline-flex; align-items: center; }
@@ -227,11 +229,11 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .published { font-size: 14px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; color: var(--meta); margin: 19px 0 0; }
 
 /* ------------------------------------------------------------------ footer */
-footer.light { background: var(--yellow); color: #000; padding: 45px 0 35px; }
+footer.light { background: var(--bar); color: #000; padding: 45px 0 35px; }
 footer.light p { margin: 0; }
 footer.light a { color: #000; text-decoration: none; }
 footer .world { margin: 20px 0 10px; }
-footer .world svg { width: 100%; height: auto; max-height: 150px; opacity: .8; display: block; }
+footer .world svg { width: 100%; height: auto; max-height: 150px; opacity: .8; display: block; color: var(--map); }
 footer .foot-title { text-align: center; margin-bottom: 26px; }
 footer .foot-title > a { display: block; font-size: 28px; font-weight: 400; letter-spacing: .3px; }
 footer .foot-title span { display: block; font-size: 17px; margin-top: 6px; }
