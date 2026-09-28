@@ -71,7 +71,11 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .top .alert svg { width: 17px; height: 17px; margin-right: 17px; margin-top: -3px; }
 .top .pill { background: #000; color: #fff; border-radius: 20px; padding: 2px 20px 4px; font-weight: 400; }
 .top .link:empty { display: none; }
-@media (max-width: 768px) { .top .container { flex-direction: column; text-align: center; } }
+@media (max-width: 768px) {
+  .top { font-size: 14px; padding: 4px 10px 5px; }
+  .top .container { flex-direction: column; text-align: center; gap: 4px; }
+  .top .pill { font-size: 12px; padding: 1px 12px 2px; }
+}
 
 /* ------------------------------------------------------------------ hero (header.splash) */
 .splash { position: relative; z-index: 0; background-color: #dcdcdc; height: 60vh; min-height: 475px; max-height: 630px; }
@@ -105,14 +109,19 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .branding .brand { flex: 1 1 0; max-width: 25%; display: flex; justify-content: center; align-items: center; }
 .branding .brand img { display: block; margin: 0 auto; max-height: 58px; max-width: 86%; padding: 5px 0; filter: drop-shadow(10px 1px 14px #212D49); }
 @media (max-width: 768px) {
-  .branding { flex-wrap: wrap; top: 56px; }
-  .branding .brand { flex: 0 0 33.33%; max-width: 33.33%; height: 50px; }
-  .branding .brand img { max-height: 40px; }
+  .branding { flex-wrap: wrap; top: 52px; padding: 6px 10px; }
+  .branding .brand { flex: 0 0 33.33%; max-width: 33.33%; height: 40px; }
+  .branding .brand img { max-height: 30px; }
 }
 
 .splash-center-bottom { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; width: 100%; text-align: center; color: #fff; animation: fadein 5s; }
 .splash-center-bottom .tagline { position: absolute; left: 0; right: 0; bottom: 69px; width: 50%; margin: 0 auto; font-size: 4.55vh; font-weight: 400; line-height: 100%; }
-@media (max-width: 700px) { .splash-center-bottom .tagline { width: 75%; font-size: 30px; } }
+@media (max-width: 700px) {
+  .splash { height: 66vh; min-height: 500px; }
+  .splash-center-bottom .tagline { width: 88%; font-size: 22px; line-height: 1.18; }
+  .splash-center-bottom .home-title { bottom: 34px; gap: 14px; }
+  .hero-logo img { height: auto; width: 84vw; max-width: 340px; }
+}
 .splash-center-bottom h1 { width: 90%; margin: 0 auto; color: #fff; }
 /* home: site logo as the page title, above the tagline */
 .splash-center-bottom .home-title { position: absolute; left: 0; right: 0; bottom: 60px; display: flex; flex-direction: column; align-items: center; gap: 2.2vh; }
