@@ -106,7 +106,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .branding .brand img { display: block; margin: 0 auto; max-height: 58px; max-width: 86%; padding: 5px 0; filter: drop-shadow(10px 1px 14px #212D49); }
 @media (max-width: 768px) {
   .branding { flex-wrap: wrap; top: 56px; }
-  .branding .brand { flex: 0 0 33.33%; max-width: 33.33%; height: 50px; }
+  .branding .brand { flex: 0 0 50%; max-width: 50%; height: 50px; }
   .branding .brand img { max-height: 40px; }
 }
 
