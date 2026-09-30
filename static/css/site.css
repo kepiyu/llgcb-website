@@ -71,10 +71,13 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .top .alert svg { width: 17px; height: 17px; margin-right: 17px; margin-top: -3px; }
 .top .pill { background: #000; color: #fff; border-radius: 20px; padding: 2px 20px 4px; font-weight: 400; }
 .top .link:empty { display: none; }
+.top .pill-short { display: none; }
 @media (max-width: 768px) {
-  .top { font-size: 14px; padding: 4px 10px 5px; }
-  .top .container { flex-direction: column; text-align: center; gap: 4px; }
-  .top .pill { font-size: 12px; padding: 1px 12px 2px; }
+  /* one line, as on GCB phones: news link left, short preview tag right */
+  .top { font-size: 15px; padding: 5px 12px 6px; }
+  .top .container { flex-direction: row; gap: 8px; }
+  .top .pill { font-size: 12px; padding: 1px 12px 2px; white-space: nowrap; }
+  .top .pill-long { display: none; } .top .pill-short { display: inline; }
 }
 
 /* ------------------------------------------------------------------ hero (header.splash) */
@@ -110,19 +113,20 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .branding .brand img { display: block; margin: 0 auto; max-height: 58px; max-width: 86%; padding: 5px 0; filter: drop-shadow(10px 1px 14px #212D49); }
 .branding .brand.tall img { max-height: 80px; }
 @media (max-width: 768px) {
-  .branding { flex-wrap: wrap; top: 52px; padding: 6px 10px; }
-  .branding .brand { flex: 0 0 33.33%; max-width: 33.33%; height: 50px; }
-  .branding .brand img { max-height: 40px; max-width: 92%; }
-  .branding .brand.tall img { max-height: 50px; }
+  /* GCB phones: two logos per row, about 50 px tall */
+  .branding { flex-wrap: wrap; top: 48px; padding: 8px 14px; }
+  .branding .brand { flex: 0 0 50%; max-width: 50%; height: 62px; }
+  .branding .brand img { max-height: 50px; max-width: 80%; }
+  .branding .brand.tall img { max-height: 60px; }
 }
 
 .splash-center-bottom { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; width: 100%; text-align: center; color: #fff; animation: fadein 5s; }
 .splash-center-bottom .tagline { position: absolute; left: 0; right: 0; bottom: 69px; width: 50%; margin: 0 auto; font-size: 4.55vh; font-weight: 400; line-height: 100%; }
 @media (max-width: 700px) {
-  .splash { height: 66vh; min-height: 500px; }
-  .splash-center-bottom .tagline { width: 88%; font-size: 22px; line-height: 1.18; }
-  .splash-center-bottom .home-title { bottom: 34px; gap: 14px; }
-  .hero-logo img { height: auto; width: 84vw; max-width: 340px; }
+  .home .splash { height: 72vh; min-height: 560px; max-height: 640px; }
+  .splash-center-bottom .tagline { width: 80%; font-size: 24px; line-height: 1.2; }
+  .splash-center-bottom .home-title { bottom: 36px; gap: 16px; }
+  .splash .hero-logo img { height: auto; width: 78vw; max-width: 320px; }
 }
 .splash-center-bottom h1 { width: 90%; margin: 0 auto; color: #fff; }
 /* home: site logo as the page title, above the tagline */
@@ -268,7 +272,16 @@ footer .foot-lines p { margin: 0 0 6px; }
 footer .foot-lines span { margin: 0 12px; opacity: .6; }
 footer .foot-lines a { text-decoration: none; }
 footer .foot-lines p + p a { border-bottom: 1px solid rgba(0, 0, 0, .35); }
-@media (max-width: 768px) { footer.light { padding-top: 30px; text-align: center; } footer .wordmark { font-size: 19px; letter-spacing: .12em; } footer .foot-lines span { margin: 0 6px; } }
+@media (max-width: 768px) {
+  footer.light { padding-top: 34px; padding-bottom: 64px; text-align: center; }  /* room for the floating Top button */
+  /* two balanced lines: LOW LATENCY GLOBAL / CARBON BUDGET */
+  footer .wordmark { font-size: 20px; letter-spacing: .12em; line-height: 1.45; }
+  footer .wordmark .w-light { display: block; }
+  footer .foot-lines { margin-top: 20px; font-size: 16px; }
+  /* one link per line, as on GCB phones */
+  footer .foot-lines p:first-child a { display: block; margin: 0 0 6px; }
+  footer .foot-lines p:first-child span { display: none; }
+}
 
 
 /* back to top */
