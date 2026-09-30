@@ -187,6 +187,10 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .btn:hover { opacity: 1; }
 .btn:active { position: relative; top: 2px; }
 .content p .btn { margin-left: 0; border: none; }
+/* Buttons inside body text keep their own colours and size (the text-link rules above would make them black
+   and change their padding on hover). Buttons on dark panels are recoloured further down. */
+.content .btn { color: #fff; border: none; }
+.content p a.btn:hover, .content li a.btn:hover { padding-bottom: 5px; border-bottom: none; }
 @media (max-width: 768px) { .content .btn { margin-top: 20px; } }
 
 /* ------------------------------------------------------------------ page content */
